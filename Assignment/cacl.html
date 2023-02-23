@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" >
+        function insert(num)   
+        {  
+            document.calci.textview.value = document.calci.textview.value + num;  
+        }  
+        function equals()  
+        {  
+            var exp = document.calci.textview.value;  
+            if(exp)  
+            {   
+                document.calci.textview.value = eval(exp)  
+            }  
+        }  
+        function backspace()
+        {
+            var exp = document.calci.textview.value;
+            document.calci.textview.value = exp.substring(0, exp.length - 1);
+        }
+    </script>
+    <title>Calculator</title>
+    <style>
+        body{
+            background-color: #FF3CAC;
+            background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+            height: fit-content ;
+            background-repeat: no-repeat;
+        }
+       
+        #calc-body{
+            display: block;
+            border: 2px solid rgb(0, 0, 0);
+            width: max-content;
+            height: fit-content;
+            margin: auto;
+            margin-top: 50px;
+        }
+        #screen input{
+            /* width:  100%; */
+            width: -webkit-fill-available;
+            height: 15vh;
+            background-color: #D9AFD9;
+            background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+            display: block;
+        }
+       
+        .key-row{
+            display: flex;
+            flex-direction: row;
+            width: 100%;   
+        }
+        
+        .key-row input{
+            display: block;
+            width: 75px;
+            height: 75px;
+            background-color: antiquewhite;
+            border-radius: 20px;
+            margin: 10px;
+            font-size: 50px;
+            border: none;
+        }
+        #row-1{
+            display:  flex;
+            flex-direction: row;
+            border-top: 0.5px solid black;
+            border-bottom: 0.5px solid black;
+            background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
+        }
+        #row-1 input{
+            display: block ;
+            width: 75px;
+            height: 75px;
+            background: linear-gradient(90deg, #00C9FF 0%, #a6d3aa 100%);
+            border-radius: 20px;
+            margin: 10px;
+            font-size: 50px;
+            border: none;
+
+            
+        }
+        
+        .textview{
+            font-size: 30px;
+        }
+        #clear{
+            background-color: red;
+        }
+        #equal{
+            background-color: aquamarine;
+        }
+        #percent{
+            background-color: #abd33f;
+        }       
+        #root{
+            background-color: #b041d0;
+        }
+        #point{
+            background-color: #f6ff45;
+        }
+        #num-pad{
+            background-image: linear-gradient( 112.7deg,  rgba(253,185,83,1) 11.4%, rgba(255,138,0,1) 70.2% );
+        }
+        input:hover{
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 90.1% );;
+    }
+
+    </style>
+</head>
+<body>
+    <form name="calci">
+    <div id="calc-body">
+        <div id="screen" style="font-size: 1000px">
+            <input class= "textview" name = "textview" > 
+        </div>
+        </form>
+        <div id="key">
+            <div id="row-1" class="operator">
+                <input type ="button" class="number" onclick="insert('-')"  value="-">
+                <input type="button" class="number" onclick="insert('+')"  value="+">
+                <input type = "button" class="number" onclick="insert('*')" value="*">
+                <input type = "button" class="number" onclick="insert('/')" value="/" >
+            </div>
+            <div id = "num-pad">
+            <div id="row-2" class="key-row">
+            <input type = "button" id = "one" class = "number"  onclick="insert('1')"  value="1">
+            <input type = "button" id = "two" class = "number"  onclick="insert('2')" value="2">
+            <input type = "button" id="three" class = "number"  onclick="insert('3')" value="3">
+            <input type = "button" id="percent" class = "number"  onclick="insert('%')" value="%">
+            </div>
+            <div id="row-3" class="key-row">
+                <input type = "button" id="four" class = "number"  onclick="insert('4')" value="4">
+                <input type = "button" id="five" class = "number"  onclick="insert('5')" value="5">
+                <input type = "button" id="six" class = "number" onclick="insert('6')"  value="6">
+                <input type = "button" id="root" class = "number"  onclick="backspace()" value="back" style = "font-size: large;">
+            </div>
+                <div id="row-4" class="key-row">
+                <input type = "button" id="seven" class = "number" onclick="insert('7')"  value="7">
+                <input type = "button" id="eight" class = "number"  onclick="insert('8')" value="8">
+                <input type = "button" id="nine" class = "number" onclick="insert('9')"  value="9">
+                <input type = "button" id="clear" value="C" onclick="calci.textview.value = ' ' ">
+            </div>
+            <div id="row-5" class="key-row">
+                <input type = "button" id="Zero" class = "number"  onclick="insert('0')" value="0">
+                <input type = "button" id="DoubleZero" class = "number" onclick="insert('0'), insert('0')"  value="00">
+                <input type = "button" id="point" class="number"  onclick="insert('.')" value=".">
+                <input type = "button" id="equal" value="="  onclick="equals()">
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

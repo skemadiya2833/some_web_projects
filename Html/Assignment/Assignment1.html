@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Sample Assignment form</h1>
+
+    <form action="/Success.html" id="none">
+<div>
+        <label for="fname">Name</label>
+        <input type="text" name="fname">
+        <br>
+        <br>
+        <label for="num">Phone</label>
+        <input type="tel" name="num" size="10">
+        <br>
+        <br>
+        <label for="mail">Email</label>
+        <input type = "email" name="mail">
+</div>
+<div>
+    <fieldset>
+        <legend><p>Which taxi do you require ?</p></legend>
+            <label><input type="radio" name = "option" value="Car">Car</label>
+            <br>
+            <label><input type="radio" name = "option" value="Van">Van</label>
+            <br>
+            <label><input type="radio" name = "option" value="Tuk Tuk">Tuk Tuk</label>     
+            <br>
+        </fieldset>
+</div>
+<div>
+        <fieldset>
+        <legend><p>Extras</p></legend>
+            <label><input type="checkbox" name = "Babysit" value="Babysit">Babysit</label>
+            <br>
+            <label><input type="checkbox" name = "Babysit" value="Babysit">Babysit</label>
+            <br>
+            <label><input type="checkbox" name = "Babysit" value="Babysit">Babysit</label>
+            <br>
+    </fieldset>
+</div>
+    <br>
+<div>
+    <label for="dateTime">Pickup Date Time</label>
+    <input type="datetime-local" name="dateTime">
+    <br>
+</div>
+<br>
+<div>
+    <label for="dropPlace">Drop Place</label>
+    <input type="text" name="dropPlace">
+    <br>
+</div>
+<br>
+<div>
+    <label for="Special_Instruction">Special Instruction</label>
+    <textarea name="comment" form="usrform"></textarea>
+</div>
+    <br>
+    <input type="Submit" value="Submit Booking">
+    </form>    
+</body>
+</html>

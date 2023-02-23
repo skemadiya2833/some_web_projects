@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation By JS</title>
+</head>
+<body>
+    <script>
+        function IsValidEmail() {
+            var email = document.getElementById('email').value;
+            var patternEmail = /^[A-Za-z._0-9]+@[A-Za-z]+[.][A-Za-z]+$/ ;
+            var patternMob = /^[0-9]{10}$/ ;
+            if(patternEmail.test(email))
+            {
+                alert("Correct Email");
+            }
+            else if(patternMob.test(email))
+            {
+                alert("Correct Mob");
+            }
+            else
+            {
+                alert("Incorrect")
+            }
+        }
+    </script>
+    <form onsubmit ="IsValidEmail()">
+        <input type="text" id="email" name="input">
+        <button onclick= "ValidateEmail()">Submit</button>
+    </form>
+        
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample form</title>
+</head>
+<body>
+    
+     <center><h2>This is A Sample form</h2></center>  
+    <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fname">First Name</label>
+        <input type="text" name="fname">
+        <br>
+        <br>
+        <label for="lname">Last Name</label>
+        <input type="text" name = "lname">
+        <br>
+        <br>
+        <br>
+        <label for="gender">Gender</label>
+        <label><input type="radio" name = "gender" value="Car">Male</label>
+        <label><input type="radio" name = "gender" value="Van">Female</label>
+        <label><input type="radio" name = "gender" value="Tuk Tuk">other</label> 
+        <br>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password">
+        <br>
+        <br>    
+        <label for="branch">Select the Branch:</label>
+        <select name="branch">
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option> 
+            <option value="ME">ME</option>
+            <option value="CE">CE</option>
+            <option value="EC">EC</option>
+        </select>    
+        <br>
+        <br>
+        <label><input type="checkbox" name = "IWT">IWT</label>
+        <label><input type="checkbox" name = "DBMS">DBMS</label>
+        <label><input type="checkbox" name = "English">English</label>
+        <br>
+        <br>
+        <label for="Special_Instruction">Description of your technical skills</label>
+        <br>
+        <textarea rows="10" cols="35" name="comment" form="usrform" placeholder="I like Coding....."></textarea>
+
+    </fieldset>
+
+    <br>
+    <input type="Submit">
+    </form> 
+</body>
+<style>
+    body{
+        background-image: url('./pexels-jae-park-3802510.jpg');
+        background-attachment: fixed;
+        background-size: 100% 150%;
+        background-repeat: no-repeat;
+    }
+</style>
+</html>

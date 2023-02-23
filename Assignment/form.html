@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!-- <link rel="stylesheet" href="./form.css"> -->
+</head>
+<style>
+    body{
+    background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(32,115,221,1) 49%, rgba(145,0,255,0.9447129193474265) 71%);
+    display: block;
+    width: 100vw;
+    height: 100vh;
+
+}
+#form-div{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 5%;
+    width:35%;
+    height: 85%;
+    
+}
+#heading{
+    display: flex;
+    justify-content: center;
+    margin-top: 0%;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: black;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: white;
+}
+.identfier{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+#name-div{
+    display: flex;
+    margin-left: 10px;
+    width: fit-content;
+    flex-direction: row;
+    
+
+}
+#name-div div{
+    display: flex;
+    height: 40px;
+    justify-content: space-evenly;
+
+    margin: auto;
+    margin-left: 10%;
+}
+#name-div input{
+    margin: 10px;
+    width: 40%;
+    height: 100%;
+}
+
+#gender-div{
+    display: inline-block;
+    margin-left: 10px;
+}
+#gender-div h2{
+display: block;
+height: fit-content;
+width: fit-content;
+margin-right: 1%;
+}
+#college{
+  display: inline-flex;
+  /* justify-content: space-between; */
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#college input{
+    display: block;
+    margin-left: 10%;
+    width: 50%;
+}
+#phone-div{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#phone-div input{
+    display: block;
+    margin-left: 11%;
+    width: 50%;
+}
+#profession-div{
+
+    display: flex;
+    margin-left: 10px;
+}
+
+#profession-div select{
+    display: flex;
+    margin-left: 8%;
+    width: 50%;
+}
+#submit{
+    display: flex;
+    margin: auto;
+    
+}
+#submit button{
+    display: block;
+    color: white;
+    font-size: 25px;
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(205,76,244,1) 75%, rgba(252,70,242,1) 100%);
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    height: 50px;
+}
+#submit button:hover{
+    background: black;
+    
+}
+input{
+    border: none;
+    background-color: #b69a9a4d;
+    border-radius: 5px;
+}
+select{
+    border: none;
+    background-color: #b69a9a4d;
+    border-radius: 5px;
+}
+
+</style>
+<body>
+    <div id="form-div">
+        <h2 id="heading">Registration Form</h2>
+        <div id="name-div">
+            <h2 class="identfier">Name</h2>
+           <div>
+            <input type="text" placeholder="    First Name">
+            <input type="text" placeholder="    Last Name">
+           </div>
+        </div>
+        <div id="phone-div">
+            <h2 class="identfier">En. Number</h2>
+            <input type="text">
+        </div>
+        <div id="gender-div">
+            <h2 class="identfier">Gender</h2>
+            <input type="radio" name="gender" id="" class="radio">
+            <span>male</span>
+            <input type="radio" name="gender" id="" class="radio">
+            <span>female</span>
+        </div>
+        <div id="college">
+            <h2 class="identfier">College</h2>
+            <input type="text">
+        </div>
+        <div id="phone-div">
+            <h2 class="identfier">Phone</h2>
+            <input type="tel">
+        </div>        
+        <div id="profession-div">
+            <h2 class="identfier">Course</h2>
+            <select name="" id="">
+                <option value="" disabled selected></option>
+                <option value="">B.Tech</option>
+                <option value="">BSC</option>
+                <option value="">B.Com</option>
+                <option value="">BA</option>
+            </select>
+        </div>
+        <div id="submit">
+            <button type="submit">Submit</button>
+        </div>
+        
+    </div>
+</body>
+</html>
